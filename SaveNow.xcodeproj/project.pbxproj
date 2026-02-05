@@ -3,8 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 90;
 	objects = {
+
+/* Begin PBXBuildFile section */
+		C00D184D2EFD43AF00A69560 /* SaveNowShare.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C00D18432EFD43AF00A69560 /* SaveNowShare.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C01DAE9F2F34D12600300368 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C01DAE9E2F34D12600300368 /* README.md */; };
+/* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		C00D18212EFD417700A69560 /* PBXContainerItemProxy */ = {
@@ -21,17 +26,58 @@
 			remoteGlobalIDString = C00D18102EFD417600A69560;
 			remoteInfo = SaveNow;
 		};
+		C00D184B2EFD43AF00A69560 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C00D18092EFD417600A69560 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C00D18422EFD43AF00A69560;
+			remoteInfo = SaveNowShare;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C00D18522EFD43AF00A69560 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			dstPath = "";
+			dstSubfolder = PlugIns;
+			files = (
+				C00D184D2EFD43AF00A69560 /* SaveNowShare.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C00D18112EFD417600A69560 /* SaveNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SaveNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C00D18202EFD417700A69560 /* SaveNowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SaveNowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C00D182A2EFD417700A69560 /* SaveNowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SaveNowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C00D18432EFD43AF00A69560 /* SaveNowShare.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SaveNowShare.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C01DAE9E2F34D12600300368 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		C00D184E2EFD43AF00A69560 /* Exceptions for "SaveNowShare" folder in "SaveNowShare" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = C00D18422EFD43AF00A69560 /* SaveNowShare */;
+		};
+		C07A6ADC2EFEE9F40082B9FF /* Exceptions for "SaveNow" folder in "SaveNow" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = C00D18102EFD417600A69560 /* SaveNow */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		C00D18132EFD417600A69560 /* SaveNow */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				C07A6ADC2EFEE9F40082B9FF /* Exceptions for "SaveNow" folder in "SaveNow" target */,
+			);
 			path = SaveNow;
 			sourceTree = "<group>";
 		};
@@ -45,29 +91,36 @@
 			path = SaveNowUITests;
 			sourceTree = "<group>";
 		};
+		C00D18442EFD43AF00A69560 /* SaveNowShare */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				C00D184E2EFD43AF00A69560 /* Exceptions for "SaveNowShare" folder in "SaveNowShare" target */,
+			);
+			path = SaveNowShare;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C00D180E2EFD417600A69560 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C00D181D2EFD417700A69560 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C00D18272EFD417700A69560 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C00D18402EFD43AF00A69560 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
 		};
 /* End PBXFrameworksBuildPhase section */
 
@@ -78,7 +131,9 @@
 				C00D18132EFD417600A69560 /* SaveNow */,
 				C00D18232EFD417700A69560 /* SaveNowTests */,
 				C00D182D2EFD417700A69560 /* SaveNowUITests */,
+				C00D18442EFD43AF00A69560 /* SaveNowShare */,
 				C00D18122EFD417600A69560 /* Products */,
+				C01DAE9E2F34D12600300368 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,6 +143,7 @@
 				C00D18112EFD417600A69560 /* SaveNow.app */,
 				C00D18202EFD417700A69560 /* SaveNowTests.xctest */,
 				C00D182A2EFD417700A69560 /* SaveNowUITests.xctest */,
+				C00D18432EFD43AF00A69560 /* SaveNowShare.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,17 +158,17 @@
 				C00D180D2EFD417600A69560 /* Sources */,
 				C00D180E2EFD417600A69560 /* Frameworks */,
 				C00D180F2EFD417600A69560 /* Resources */,
+				C00D18522EFD43AF00A69560 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C00D184C2EFD43AF00A69560 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				C00D18132EFD417600A69560 /* SaveNow */,
 			);
 			name = SaveNow;
-			packageProductDependencies = (
-			);
 			productName = SaveNow;
 			productReference = C00D18112EFD417600A69560 /* SaveNow.app */;
 			productType = "com.apple.product-type.application";
@@ -134,8 +190,6 @@
 				C00D18232EFD417700A69560 /* SaveNowTests */,
 			);
 			name = SaveNowTests;
-			packageProductDependencies = (
-			);
 			productName = SaveNowTests;
 			productReference = C00D18202EFD417700A69560 /* SaveNowTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -157,11 +211,27 @@
 				C00D182D2EFD417700A69560 /* SaveNowUITests */,
 			);
 			name = SaveNowUITests;
-			packageProductDependencies = (
-			);
 			productName = SaveNowUITests;
 			productReference = C00D182A2EFD417700A69560 /* SaveNowUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		C00D18422EFD43AF00A69560 /* SaveNowShare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C00D184F2EFD43AF00A69560 /* Build configuration list for PBXNativeTarget "SaveNowShare" */;
+			buildPhases = (
+				C00D183F2EFD43AF00A69560 /* Sources */,
+				C00D18402EFD43AF00A69560 /* Frameworks */,
+				C00D18412EFD43AF00A69560 /* Resources */,
+			);
+			buildRules = (
+			);
+			fileSystemSynchronizedGroups = (
+				C00D18442EFD43AF00A69560 /* SaveNowShare */,
+			);
+			name = SaveNowShare;
+			productName = SaveNowShare;
+			productReference = C00D18432EFD43AF00A69560 /* SaveNowShare.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -184,6 +254,9 @@
 						CreatedOnToolsVersion = 26.2;
 						TestTargetID = C00D18102EFD417600A69560;
 					};
+					C00D18422EFD43AF00A69560 = {
+						CreatedOnToolsVersion = 26.2;
+					};
 				};
 			};
 			buildConfigurationList = C00D180C2EFD417600A69560 /* Build configuration list for PBXProject "SaveNow" */;
@@ -195,7 +268,7 @@
 			);
 			mainGroup = C00D18082EFD417600A69560;
 			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
+			preferredProjectObjectVersion = 90;
 			productRefGroup = C00D18122EFD417600A69560 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -203,6 +276,7 @@
 				C00D18102EFD417600A69560 /* SaveNow */,
 				C00D181F2EFD417700A69560 /* SaveNowTests */,
 				C00D18292EFD417700A69560 /* SaveNowUITests */,
+				C00D18422EFD43AF00A69560 /* SaveNowShare */,
 			);
 		};
 /* End PBXProject section */
@@ -210,48 +284,47 @@
 /* Begin PBXResourcesBuildPhase section */
 		C00D180F2EFD417600A69560 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C00D181E2EFD417700A69560 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C00D18282EFD417700A69560 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C00D18412EFD43AF00A69560 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+				C01DAE9F2F34D12600300368 /* README.md in Resources */,
+			);
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C00D180D2EFD417600A69560 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C00D181C2EFD417700A69560 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C00D18262EFD417700A69560 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C00D183F2EFD43AF00A69560 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
 		};
 /* End PBXSourcesBuildPhase section */
 
@@ -266,10 +339,15 @@
 			target = C00D18102EFD417600A69560 /* SaveNow */;
 			targetProxy = C00D182B2EFD417700A69560 /* PBXContainerItemProxy */;
 		};
+		C00D184C2EFD43AF00A69560 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C00D18422EFD43AF00A69560 /* SaveNowShare */;
+			targetProxy = C00D184B2EFD43AF00A69560 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		C00D18322EFD417700A69560 /* Debug */ = {
+		C00D18322EFD417700A69560 /* Debug configuration for PBXProject "SaveNow" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -332,7 +410,7 @@
 			};
 			name = Debug;
 		};
-		C00D18332EFD417700A69560 /* Release */ = {
+		C00D18332EFD417700A69560 /* Release configuration for PBXProject "SaveNow" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -388,15 +466,17 @@
 			};
 			name = Release;
 		};
-		C00D18352EFD417700A69560 /* Debug */ = {
+		C00D18352EFD417700A69560 /* Debug configuration for PBXNativeTarget "SaveNow" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 956SJTN966;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SaveNow/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -419,15 +499,17 @@
 			};
 			name = Debug;
 		};
-		C00D18362EFD417700A69560 /* Release */ = {
+		C00D18362EFD417700A69560 /* Release configuration for PBXNativeTarget "SaveNow" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 956SJTN966;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SaveNow/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -450,12 +532,13 @@
 			};
 			name = Release;
 		};
-		C00D18382EFD417700A69560 /* Debug */ = {
+		C00D18382EFD417700A69560 /* Debug configuration for PBXNativeTarget "SaveNowTests" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 956SJTN966;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
 				MARKETING_VERSION = 1.0;
@@ -471,12 +554,13 @@
 			};
 			name = Debug;
 		};
-		C00D18392EFD417700A69560 /* Release */ = {
+		C00D18392EFD417700A69560 /* Release configuration for PBXNativeTarget "SaveNowTests" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 956SJTN966;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
 				MARKETING_VERSION = 1.0;
@@ -492,11 +576,12 @@
 			};
 			name = Release;
 		};
-		C00D183B2EFD417700A69560 /* Debug */ = {
+		C00D183B2EFD417700A69560 /* Debug configuration for PBXNativeTarget "SaveNowUITests" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 956SJTN966;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Arkinazizi.SaveNowUITests;
@@ -511,11 +596,12 @@
 			};
 			name = Debug;
 		};
-		C00D183C2EFD417700A69560 /* Release */ = {
+		C00D183C2EFD417700A69560 /* Release configuration for PBXNativeTarget "SaveNowUITests" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 956SJTN966;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Arkinazizi.SaveNowUITests;
@@ -527,6 +613,62 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = SaveNow;
+			};
+			name = Release;
+		};
+		C00D18502EFD43AF00A69560 /* Debug configuration for PBXNativeTarget "SaveNowShare" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 956SJTN966;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SaveNowShare/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SaveNowShare;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Arkinazizi.SaveNow.SaveNowShare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C00D18512EFD43AF00A69560 /* Release configuration for PBXNativeTarget "SaveNowShare" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 956SJTN966;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SaveNowShare/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SaveNowShare;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Arkinazizi.SaveNow.SaveNowShare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -536,37 +678,41 @@
 		C00D180C2EFD417600A69560 /* Build configuration list for PBXProject "SaveNow" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C00D18322EFD417700A69560 /* Debug */,
-				C00D18332EFD417700A69560 /* Release */,
+				C00D18322EFD417700A69560 /* Debug configuration for PBXProject "SaveNow" */,
+				C00D18332EFD417700A69560 /* Release configuration for PBXProject "SaveNow" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		C00D18342EFD417700A69560 /* Build configuration list for PBXNativeTarget "SaveNow" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C00D18352EFD417700A69560 /* Debug */,
-				C00D18362EFD417700A69560 /* Release */,
+				C00D18352EFD417700A69560 /* Debug configuration for PBXNativeTarget "SaveNow" */,
+				C00D18362EFD417700A69560 /* Release configuration for PBXNativeTarget "SaveNow" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		C00D18372EFD417700A69560 /* Build configuration list for PBXNativeTarget "SaveNowTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C00D18382EFD417700A69560 /* Debug */,
-				C00D18392EFD417700A69560 /* Release */,
+				C00D18382EFD417700A69560 /* Debug configuration for PBXNativeTarget "SaveNowTests" */,
+				C00D18392EFD417700A69560 /* Release configuration for PBXNativeTarget "SaveNowTests" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		C00D183A2EFD417700A69560 /* Build configuration list for PBXNativeTarget "SaveNowUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C00D183B2EFD417700A69560 /* Debug */,
-				C00D183C2EFD417700A69560 /* Release */,
+				C00D183B2EFD417700A69560 /* Debug configuration for PBXNativeTarget "SaveNowUITests" */,
+				C00D183C2EFD417700A69560 /* Release configuration for PBXNativeTarget "SaveNowUITests" */,
 			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C00D184F2EFD43AF00A69560 /* Build configuration list for PBXNativeTarget "SaveNowShare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C00D18502EFD43AF00A69560 /* Debug configuration for PBXNativeTarget "SaveNowShare" */,
+				C00D18512EFD43AF00A69560 /* Release configuration for PBXNativeTarget "SaveNowShare" */,
+			);
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */

@@ -1,30 +1,59 @@
-//
-//  ShareViewController.swift
-//  SaveNowShare
-//
-//  Created by Arkin Azizi on 25.12.2025.
-//
-
 import UIKit
-import Social
+import UniformTypeIdentifiers
 
-class ShareViewController: SLComposeServiceViewController {
+@objc(ShareViewController)
+class ShareViewController: UIViewController {
 
-    override func isContentValid() -> Bool {
-        // Do validation of contentText and/or NSExtensionContext attachments here
-        return true
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        extractSharedURL()
     }
 
-    override func didSelectPost() {
-        // This is called after the user selects Post. Do the upload of contentText and/or NSExtensionContext attachments.
-    
-        // Inform the host that we're done, so it un-blocks its UI. Note: Alternatively you could call super's -didSelectPost, which will similarly complete the extension context.
-        self.extensionContext!.completeRequest(returningItems: [], completionHandler: nil)
+    private func extractSharedURL() {
+        guard let extensionItem = extensionContext?.inputItems.first as? NSExtensionItem,
+              let attachments = extensionItem.attachments else {
+            closeExtension()
+            return
+        }
+
+        for provider in attachments {
+            if provider.hasItemConformingToTypeIdentifier(UTType.url.identifier) {
+                provider.loadItem(forTypeIdentifier: UTType.url.identifier, options: nil) { [weak self] (item, error) in
+                    guard let self = self else { return }
+                    if let shareURL = item as? URL {
+                        self.openMainApp(for: shareURL)
+                    } else {
+                        self.closeExtension()
+                    }
+                }
+                return
+            }
+        }
+
+        closeExtension()
     }
 
-    override func configurationItems() -> [Any]! {
-        // To add configuration options via table cells at the bottom of the sheet, return an array of SLComposeSheetConfigurationItem here.
-        return []
+    private func openMainApp(for url: URL) {
+        let encoded = url.absoluteString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+        let appURL = URL(string: "savenow://download?url=\(encoded)")!
+
+        // 🔹 استفاده از responder chain برای باز کردن بی‌هشدار اپ اصلی
+        var responder: UIResponder? = self
+        let selector = NSSelectorFromString("openURL:")
+        while responder != nil {
+            if responder?.responds(to: selector) == true {
+                responder?.perform(selector, with: appURL)
+                break
+            }
+            responder = responder?.next
+        }
+
+        // همیشه Share Extension را ببند
+        closeExtension()
     }
 
+    private func closeExtension() {
+        extensionContext?.completeRequest(returningItems: nil, completionHandler: nil)
+    }
 }
+
