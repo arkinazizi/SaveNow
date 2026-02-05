@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://via.placeholder.com/1200x280?text=SaveNow" alt="SaveNow Banner" />
+  <img src="https://cdn-icons-png.flaticon.com/512/732/732250.png" alt="SaveNow Banner" />
 </p>
 
 <h1 align="center">SaveNow</h1>
